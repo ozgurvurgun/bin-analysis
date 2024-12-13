@@ -1,5 +1,3 @@
-const fs = require("fs/promises");
-
 class BinCalculator {
   constructor() {
     this.currentBin = {};

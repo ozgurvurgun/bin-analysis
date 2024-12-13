@@ -179,19 +179,6 @@ async calculate(data, binCount) {
   this.data = data;
   this.binCount = binCount;
   try {
-    // const jsonData = await fs.readFile(this.dataFile, "utf8");
-    // const data = JSON.parse(jsonData);
-
-    // Sort data by "congruency" first, then by "reaction_time"
-    // const sortedData = this.data.sort((a, b) => {
-    //   if (a.congruency === b.congruency) {
-    //     // If "congruency" values are equal, sort by "reaction_time"
-    //     return a.reaction_time - b.reaction_time;
-    //   }
-    //   // Prioritize "Congruent" over "Incongruent"
-    //   return a.congruency === "Congruent" ? -1 : 1;
-    // });
-
     const dataLength = this.data.length;
     const innerIteration = this.roundToNearestStep(dataLength, this.binCount) / this.binCount;
     

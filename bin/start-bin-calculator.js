@@ -28,7 +28,7 @@ csvColumnHeaders = [
   "bin5_incong",
 ];
 
-const csvHeaders = csvColumnHeaders.join(",") + "\n"; // Stringleri virgüllerle birleştirir
+const csvHeaders = csvColumnHeaders.join(",") + "\n";
 
 async function run(start, end) {
   try {
@@ -69,8 +69,7 @@ async function run(start, end) {
           .map((item) => item["Total Reaction Time"])
           .join(",") + "\n";
     }
-    // console.log(csvHeaders + csv);
-  //  const result = csvHeaders + csv;
+    
     await fs.writeFile(outputFilePath,csvHeaders + csv, "utf-8");
     console.log(`CSV başarıyla kaydedildi: ${outputFilePath}`);
   } catch (error) {

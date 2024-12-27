@@ -32,7 +32,6 @@ const csvHeaders = csvColumnHeaders.join(",") + "\n";
 
 async function run(start, end) {
   try {
-    // Dosyayı oku
     const fileContent = await fs.readFile(dataFilePath, "utf-8");
     const data = JSON.parse(fileContent);
     let csv = "";
@@ -71,7 +70,7 @@ async function run(start, end) {
     }
     
     await fs.writeFile(outputFilePath,csvHeaders + csv, "utf-8");
-    console.log(`CSV başarıyla kaydedildi: ${outputFilePath}`);
+    console.log(`CSV saved successfully: ${outputFilePath}`);
   } catch (error) {
     console.error("Error processing the data:", error);
   }

@@ -90,8 +90,7 @@ class BinCalculator {
         closestDifference = newDifference;
         closestCount = count;
       }
-  
-      // Bir sonraki adıma geç
+
       current += increment;
     }
   
